@@ -13,7 +13,7 @@
 <p>dont forget to close the inputStream object at the end.</p>
 <p>
   Also, For windows users, using wampserver or mysql workbench, you will be required to make changes to the application.properties 
-  file to reflect your MySQl port.
+  file to reflect your MySQL port. e.g 3306
 </p>
 <p>
   Thanks and enjoy!
