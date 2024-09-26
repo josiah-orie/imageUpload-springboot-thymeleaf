@@ -4,8 +4,9 @@
   Change the path to store the image to your system path. Changes will be done in line 24, 25 of the FileDataService class, as shown below:<br>
   <code>
     String file_path = "/Users/josiah/Desktop/imagefiles/" + multipartFile.getOriginalFilename();
-		String filedir = "/Users/josiah/Desktop/imagefiles/";
+    String filedir = "/Users/josiah/Desktop/imagefiles/";
   </code>
+  dont forget to close the inputStream object at the end.
 </p>
 <p>
   Also, For windows users, using wampserver or mysql workbench, you will be required to make changes to the application.properties 
