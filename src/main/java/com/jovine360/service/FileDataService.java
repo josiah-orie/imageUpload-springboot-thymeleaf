@@ -27,8 +27,6 @@ public class FileDataService {
 		FileData saveInput = FileData.builder().name(multipartFile.getOriginalFilename())
 				.type(multipartFile.getContentType()).filepath(file_path).build();
 
-//		multipartFile.transferTo(new File(filepath));
-
 		Path uploadPath = Paths.get(filedir);
 		if (!Files.exists(uploadPath)) {
 			Files.createDirectories(uploadPath);
@@ -36,6 +34,7 @@ public class FileDataService {
 		InputStream inputStream = multipartFile.getInputStream();
 		Path filePath = uploadPath.resolve(multipartFile.getOriginalFilename());
 		Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
+//		multipartFile.transferTo(new File(filepath)); // another option if you don't want to use the inputStream object
 
 		FileData fileData = fileDataRepository.save(saveInput);
 
